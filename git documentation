@@ -1,0 +1,58 @@
+Environment Setup
+
+Development Machine
+GitHub
+Jenkins (Continious Integration)
+Puppet(Testing Server)
+Production Server (From Jenkins)
+NAGIOS (for Monitoring)
+
+
+Seeing Git Repositary in Ubuntu/Linix
+
+Creating Repositary
+Making Changes
+Parallel Development
+Synchronizing Repositories
+
+mkdir devops
+nano 1.txt (hello world)
+nano 2.txt (hello world2)
+
+git init(to intialize git repository)
+git status (untracted files and modified files will be displayed)
+git add . or git add 1.txt 2.txt (to add the files to github staging repository (for tracking). "." represents all files)
+git commit -m "my first commit" (files commited to Git)
+git status (now it will display all are added to master)
+
+nano 3.txt (hello world3)
+nano 2.txt (hello world2_modify)
+
+git status (display 1 modified and 1 untracked)
+
+login to Github.com, sign in and create the Git Repositary.
+get the repositiry URL - https://github.com/ramuqa/devops.git
+
+git remote add origin "https://github.com/ramuqa/devops.git"
+
+how to push my files in to my url
+git push origin master (enter the git hub username and password)
+
+git add 2.txt (added to staged)
+git commit -m "modified 2.txt" (added to local repository not to remote)
+git push origin master (enter the git hub username and password)
+
+verify the file modified in the github repository
+
+git add 3.txt (added to staged)
+git commit -m "added 3.txt" (added to local repository not to remote)
+git push origin master (enter the git hub username and password)
+verify the file modified in the github repository
+
+
+Another developer whants to work (click Clone or download copy the link)
+come back to the master local repositiry
+create a working directory
+mkdir test
+cd test
+git clone 
